@@ -11,6 +11,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'cart' %}">Carrinho{% if request.session.items_total %} <span class="badge badge-light">{{request.session.items_total}}</span> {% endif %} </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'user_orders' %}">Pedidos </a>
+      </li>
     </ul>
     <form class="form-inline mt-2 mt-md-0 mr-3" role="search" action="/s/">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" name="q" aria-label="Search" >
@@ -18,10 +21,14 @@
     </form>
     {% if user.is_authenticated %}
     <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item active"><a class="nav-link btn btn-outline-light" href="{% url 'auth_logout' %}">Sair</a></li>
+
+      <li class="nav-item active "><a class="nav-link btn btn-outline-light" href="{% url 'auth_logout' %}">Sair</a></li>
     </ul>
     {% else %}
     <ul class="nav navbar-nav navbar-right">
+      <div class="mr-3">
+      <li class="nav-item active"><a class="nav-link btn btn-outline-light" href="{% url 'auth_register' %}">Registrar</a></li>
+      </div>      
       <li class="nav-item active"><a class="nav-link btn btn-outline-light" href="{% url 'auth_login' %}">Entrar</a></li>
     </ul>
     {% endif %}

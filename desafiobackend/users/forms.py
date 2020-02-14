@@ -5,7 +5,6 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 class LoginForm(forms.Form):
-	email = forms.EmailField(label='Informe o email.')
 	username = forms.CharField()
 	password = forms.CharField(widget=forms.PasswordInput())
 
@@ -33,13 +32,16 @@ class LoginForm(forms.Form):
 			return password
 
 class RegistrationForm(forms.ModelForm):
+	first_name = forms.CharField(label='Nome')
+	last_name = forms.CharField(label='Sobrenome')
+	email = forms.EmailField(label='Informe o email.')
 	password1 = forms.CharField(label="Informe a senha", widget=forms.PasswordInput())
 	password2 = forms.CharField(label="Confirme a senha", widget=forms.PasswordInput())
-
+	address = forms.CharField(label='Endereço')
 
 	class Meta:
 		model = User
-		fields = ['username', 'email']
+		fields = ['username', 'first_name', 'last_name', 'email']
 
 		def clean_password(self):
 			password1 = self.cleaned_data.get('password1')

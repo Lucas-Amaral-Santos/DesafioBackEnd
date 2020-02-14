@@ -16,7 +16,7 @@
   		
 		  	{% for product in products %}
 		  	<div class="col-sm-4">
-		  		<div class="card" style="width: 18rem;">
+		  		<div class="card pt-3" style="width: 18rem;">
 				  	{% if product.productimage_set.all  %}
 		  			{% for item in product.productimage_set.all %}
 		  				{% if item.featured %}

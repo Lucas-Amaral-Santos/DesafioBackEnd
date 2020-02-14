@@ -27,7 +27,7 @@ def checkout(request):
 	try:
 		# Tenta buscar um pedido associado ao carrinho
 		new_order = Order.objects.get(cart=cart)
-	except OrderDoesNotExist:
+	except Order.DoesNotExist:
 		# Caso não exista cria uma instância associado a esse acrrinho
 		new_order = Order()
 		new_order.cart = cart

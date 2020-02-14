@@ -3,35 +3,37 @@
 
 {% block content %}
   	<div class="row">
-  		
-		  	{% for product in products %}
-		  	<div class="col-sm-4">
-		  		<div class="card" style="width: 18rem;">
-				  	{% if product.productimage_set.all  %}
-		  			{% for item in product.productimage_set.all %}
-		  				{% if item.featured %}
-		  					<img class="img-responsive" src="{{ MEDIA_URL }}{{ item.image.url }}" />
-		  				{% endif %}
-		  			{% endfor %}
-		  			{% else %}
-		  			<img class="img-responsive" src="{% static 'img/placeholder.jpg' %}" />
-		  			{% endif %}
+	  	{% for product in products %}
+	  	<div class="col-sm-4">
+	  		<div class="card pt-3" style="width: 18rem;">
+			  	{% if product.productimage_set.all  %}
+	  			{% for item in product.productimage_set.all %}
+	  				{% if item.featured %}
+	  				<div style="
+	  					width: 240px;
+	  					height: 260px;
+	  					background-image: url('{{ MEDIA_URL }}{{ item.image.url }}');
+	  					background-repeat: no-repeat;
+	  					margin: 0 auto;
+	  					background-size: cover;
+	  					background-position: center;">
+	  				</div>
+	  					<!-- <img class="img-responsive" src="{{ MEDIA_URL }}{{ item.image.url }}" /> -->
+	  				{% endif %}
+	  			{% endfor %}
+	  			{% else %}
+	  			<img class="img-responsive" src="{% static 'img/placeholder.jpg' %}" />
+	  			{% endif %}
 
-				  	<div class="card-body">
-				  		<h5 class="card-title">{{ product.title }}</h5>
-					   	<p class="card-text">{{ product.description|truncatewords:15 }}</p>
-					    <a href='{% url "single_product" product.slug %}' class="btn btn-primary">Detalhes</a>
-				  	</div>
-				</div>
-
-
-		  		
-		  		{{ product.price }}
-
-		  	</div>	
-		  	{% cycle "" "" "</div></br></hr><div class='row'>" %}
-		  	
-		  	{% endfor %}
-  		
+			  	<div class="card-body">
+			  		<h5 class="card-title">{{ product.title }}</h5>
+				   	<p class="card-text">{{ product.description|truncatewords:15 }}</p>
+				    <a href='{% url "single_product" product.slug %}' class="btn btn-primary">Detalhes</a>
+			  	</div>
+			</div>	  		
+	  		{{ product.price }}
+	  	</div>	
+	  	{% cycle "" "" "</div></br></hr><div class='row'>" %}
+	  	{% endfor %}
   	</div>
 {% endblock %}
