@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'carts',
     'products',
     'orders',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -80,8 +81,12 @@ WSGI_APPLICATION = 'desafiobackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'desafiobackend',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -131,3 +136,5 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_files'),    
 )
+# Activate Django-Heroku.
+django_heroku.settings(locals())

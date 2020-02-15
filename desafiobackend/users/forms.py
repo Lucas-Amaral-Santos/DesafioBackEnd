@@ -32,8 +32,6 @@ class LoginForm(forms.Form):
 			return password
 
 class RegistrationForm(forms.ModelForm):
-	first_name = forms.CharField(label='Nome')
-	last_name = forms.CharField(label='Sobrenome')
 	email = forms.EmailField(label='Informe o email.')
 	password1 = forms.CharField(label="Informe a senha", widget=forms.PasswordInput())
 	password2 = forms.CharField(label="Confirme a senha", widget=forms.PasswordInput())
