@@ -19,7 +19,6 @@ def checkout(request):
 	try:
 		the_id = request.session['cart_id'] #Checa se exite sessão
 		cart = Cart.objects.get(id=the_id)
-		print cart
 	except:
 		the_id = None
 		return HttpResponseRedirect(reverse("cart"))
