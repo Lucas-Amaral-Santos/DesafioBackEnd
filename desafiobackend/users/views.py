@@ -8,7 +8,6 @@ from .forms import LoginForm, RegistrationForm
 # Create your views here.
 
 def logout_view(request):
-	print "logging out"
 	logout(request)
 	return HttpResponseRedirect('/')
 
