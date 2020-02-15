@@ -82,7 +82,6 @@ def add_to_cart(request, slug):
 			try:
 				v = Variation.objects.get(product=product, category_ixact=key, title_iexact=val)
 				product_var.append(v)
-				print v
 			except:
 				pass
 	#---------------------USANDO GET --------------------
