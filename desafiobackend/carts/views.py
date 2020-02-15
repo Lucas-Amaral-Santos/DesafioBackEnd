@@ -5,7 +5,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from products.models import Product, Variation
 # Create your views here.
-from models import Cart, CartItem
+from .models import Cart, CartItem
 
 
 #------------ Pedido feito a um Carrinho de compras----------------------- 
