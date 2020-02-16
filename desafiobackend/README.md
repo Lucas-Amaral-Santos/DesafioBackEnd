@@ -23,7 +23,7 @@ Login: admin
 Senha: admin123
 
 <h2>USUÁRIO</h2>
-Usuário não-logado terá a direita do navbar as opções REGISTRO e LOGIN que o 
+Usuário não-logado terá, a direita do navbar, as opções REGISTRO e LOGIN que o 
 permitirá fazer o seu registro e depois logar-se.
 
 O usuário logado terá apenas a opção LOGIN.
