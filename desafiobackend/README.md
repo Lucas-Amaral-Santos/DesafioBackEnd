@@ -13,7 +13,12 @@ https://salty-brushlands-45215.herokuapp.com/
 
 (AINDA DEBUGANDO ERRO:
 Is the server running on host "127.0.0.1" and accepting TCP/IP connections on 
-port 5432?
+port 5432?) FIXED
+
+(DEBUGANDO OUTRO ERRO:
+ ▸    No process types on ⬢ salty-brushlands-45215.
+ ▸    Upload a Procfile to add process types.
+ ▸    https://devcenter.heroku.com/articles/procfile
 )
 
 
