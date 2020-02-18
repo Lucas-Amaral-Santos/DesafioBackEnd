@@ -18,8 +18,8 @@ port 5432?) FIXED
 (DEBUGANDO OUTRO ERRO:
  ▸    No process types on ⬢ salty-brushlands-45215.
  ▸    Upload a Procfile to add process types.
- ▸    https://devcenter.heroku.com/articles/procfile
-)
+ ▸    https://devcenter.heroku.com/articles/procfile)
+ link STACKOVERFLOW: https://stackoverflow.com/questions/60280936/deploying-django-on-heroku
 
 
 <h1>Sobre o APP</h1>
