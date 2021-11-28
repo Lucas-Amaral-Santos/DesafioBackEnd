@@ -43,3 +43,6 @@ e em seguida poderá completar o pedido clicando "Realizar Pedidos".
 
 IMPORTANTE: O Pedido apenas será realizado se o administrador aceitar.
 Para tal deve ser mudado o status da classe Orders para "Finished" 
+
+
+secret_key: Gyrdcyu3b25qgyabpt5dkadcmw1pc4o47gnj9fjp
