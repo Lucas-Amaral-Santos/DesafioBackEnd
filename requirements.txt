@@ -1,4 +1,4 @@
-Django==1.11.28
+Django==2.2.24
 gunicorn==19.10.0
 Pillow==6.2.2
 psycopg2-binary==2.8.4
