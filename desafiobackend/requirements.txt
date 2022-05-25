@@ -160,7 +160,7 @@ pycep-correios==5.0.0
 pycosat==0.6.3
 pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
 Pygments==2.9.0
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1605545627475/work
 pyparsing==2.4.7
 pypiwin32==223
