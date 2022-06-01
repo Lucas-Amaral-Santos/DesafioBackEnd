@@ -81,7 +81,7 @@ graphviz==0.16
 gunicorn==19.10.0
 h11==0.12.0
 httpcore==0.13.6
-httpx==0.18.2
+httpx==0.23.0
 humanize==3.10.0
 idna @ file:///tmp/build/80754af9/idna_1593446292537/work
 ijson==3.1.4
